@@ -6,6 +6,7 @@ public class Mover : MonoBehaviour
 {
 
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float jumpSpeed = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,8 @@ public class Mover : MonoBehaviour
     {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        transform.Translate(xValue,0,zValue);
+        // Need to look up correct GetKey input for spacebar for jump function
+        float yValue = Input.GetKey("Space") * Time.deltaTime;
+        transform.Translate(xValue,yValue,zValue);
     }
 }
