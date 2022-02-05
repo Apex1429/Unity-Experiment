@@ -19,7 +19,7 @@ public class Mover : MonoBehaviour
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         // Need to look up correct GetKey input for spacebar for jump function
-        float yValue = Input.GetKey("Space") * Time.deltaTime;
+        float yValue = Input.GetKeyDown(KeyCode.Space) * Time.deltaTime;
         transform.Translate(xValue,yValue,zValue);
     }
 }
