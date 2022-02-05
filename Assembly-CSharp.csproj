@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\PrintToConsole.cs" />
      <Compile Include="Assets\Mover.cs" />
+     <Compile Include="Assets\PrintToConsole.cs" />
     <Reference Include="UnityEngine">
         <HintPath>F:\Unity\2021.1.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
