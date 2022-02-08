@@ -36,8 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Mover.cs" />
-     <Compile Include="Assets\PrintToConsole.cs" />
+     <Compile Include="Assets\Scripts\Dropper.cs" />
+     <Compile Include="Assets\Scripts\Scorer.cs" />
+     <Compile Include="Assets\Scripts\Mover.cs" />
+     <Compile Include="Assets\Scripts\ObjectHit.cs" />
+     <Compile Include="Assets\Scripts\Spinner.cs" />
     <Reference Include="UnityEngine">
         <HintPath>F:\Unity\2021.1.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -271,6 +274,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>D:\Unity\Unity-Experiment\Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library">
+        <HintPath>D:\Unity\Unity-Experiment\Library\PackageCache\com.unity.cinemachine@2.7.9\Runtime\ThirdParty\clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>F:\Unity\2021.1.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -626,8 +632,14 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
         <HintPath>D:\Unity\Unity-Experiment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>D:\Unity\Unity-Experiment\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>D:\Unity\Unity-Experiment\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>D:\Unity\Unity-Experiment\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>D:\Unity\Unity-Experiment\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -676,6 +688,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityWakatime.csproj">
+      <Project>{d3124f24-3eff-e75e-34f1-f9e7aaafe398}</Project>
+      <Name>UnityWakatime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
